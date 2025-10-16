@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Speaker Hub</title>
+  <style>
+a { text-decoration: none; color: white; } .date__container, .date__top { display: flex; align-items: center; } .center, .container, .date, .date__inner-list, .date__inner-text { position: relative; } .date__inner { position: relative; z-index: 30; width: 100%; } .date__inner-item:not(:last-child), .footer-info h2 { margin-bottom: 10px; } * { margin: 0; padding: 0; box-sizing: border-box; } body { background-color: #171717; font-family: Montserrat, sans-serif; font-weight: 400; } a, li, ol, ul { list-style: none; text-decoration: none; } .container { max-width: 1624px; width: 100%; margin: 0 auto; padding: 0 20px; } .date { padding: 136px 0 91px; background-color: #171717; color: #fff; overflow: hidden; min-height: 100vh; } .date__top-left { display: flex; align-items: center; } .date__top-left { padding: 5px 21px; border: 1px solid #fff; border-radius: 50px; margin-right: 12px; } .date__top-left-dot { background-color: #D50606; width: 11px; height: 11px; border-radius: 50%; margin-right: 13px; } .date__top-left-title { font-weight: 500; font-size: 13px; } .date__inner-title { font-family: Mulish, sans-serif; font-weight: 900; font-size: clamp(22px, 6.7vw, 26px); text-transform: uppercase; max-width: 358px; line-height: 30px; margin-bottom: 12px; span { color: #02EB51; } } .center { padding-top: 71px; } .date__inner-info { max-width: 292px; width: 100%; margin-left: auto; margin-right: auto; border-radius: 10px; padding: 4px 22px 4px 20px; background: linear-gradient(90deg, #D50606 0%, #A70000 100%); } .checkWrapper { position: relative; min-width: 31px; width: 31px; } .checkWrapper>img { width: 33px; height: 31px; min-width: 33px; } .date__bottom { margin-bottom: 24px; } .date__bottom-btn { transform-origin: center; animation: pulse 2s ease-in-out infinite; will-change: transform; font-weight: 700; font-size: 18px; padding: 18px 35px; border: none; cursor: pointer; border-radius: 20px; box-shadow: 0px 5px 0px 0px #610606; background: linear-gradient(90deg, #BB0707 0%, #D50606 51%, #BB0707 100%); color: #ffffff; max-width: 301px; width: 100%; display: flex; align-items: center; justify-content: center; gap: 13px; text-transform: uppercase; span { width: 25px; height: 25px; background-color: #fff; border-radius: 50%; display: flex; align-items: center; justify-content: center; } } .bonus_sec { display: flex; align-items: center; gap: 10px; padding: 5px; border-radius: 10px; max-width: 281px; margin: 0 auto; width: 100%; text-align: left; border: 1px solid #9B1121; background: linear-gradient(rgba(34, 34, 34, 1), rgba(34, 34, 34, 1)) padding-box, linear-gradient(90deg, #03D149 0%, #016B25 100%) border-box; background-clip: padding-box, border-box; } .bonus_sec-icon { display: flex; } .bonus_sec-title { color: white; font-weight: 900; font-size: 16px; line-height: 20px; text-transform: uppercase; font-family: Mulish, sans-serif; } .bonus_sec-text { color: white; font-size: 14px; line-height: 16px; } .flex { display: flex; align-items: center; gap: 54px; margin-bottom: 30px; } .date__timer { max-width: 106px; background-color: #fff; color: #000; z-index: 20; padding: 4px 7px 4px 9px; display: flex; align-items: center; justify-content: center; font-size: 28px; max-width: 86px; font-weight: 700; width: 100%; border-radius: 5px; box-shadow: 4px 4px 25px 1px #d50606; position: relative; z-index: 30; } .date__inner-text { font-weight: 700; font-size: 17px; color: grey; z-index: 20; } .date__inner-free { font-family: Neue Montreal, sans-serif; font-size: 17px; font-weight: 700; text-align: left; line-height: 24px; color: #919191; position: relative; z-index: 30; margin-top: 24px; } .footer { display: none; } .gliter__bg, .bonus_sec .star-left, .bonus_sec .star-right { display: none; } .date { padding: 32px 0 31px; } .date__bottom-btn { position: relative; margin-right: 30px; padding: 30px 25px; z-index: 20; } .date__top-text>br { display: none; } .only_tablet { display: none; } .footer { padding: 11px 10px 16px; border-top: 1px solid #3D3D3D; display: flex !important; align-items: center; justify-content: center; gap: 4px; } .footer-text { font-size: 14px; color: white; } .footer-logo { width: 25px; height: 24px; } .footer-link { font-size: 14px; text-decoration: underline; text-transform: uppercase; color: white; } .shadow { width: 114px; height: 314px; position: absolute; background-color: #750e0e; filter: blur(100px); top: 180px; right: 50%; transform: translateX(50%); z-index: -1; } .only_tablet { display: block; } .date__inner-free { font-size: 14px; text-align: center; } .redBorderText { font-family: Montserrat, sans-serif; font-weight: 700; font-style: Bold; font-size: 12px; line-height: 17px; text-align: center; max-width: 245px; border: 1px solid #cc0d10; padding: 5px 14px; border-radius: 10px; margin-left: auto; margin-right: auto; margin-bottom: 20px; } .tablet_hidden { display: none; } .subtitle>br { display: flex; } .flex { flex-direction: column-reverse; align-items: start; gap: 25px; } .date_gradient { display: flex; position: absolute; bottom: -10px; width: 100%; z-index: 20; height: 254px; background: linear-gradient(0deg, #171717 57%, rgba(23, 23, 23, 0) 100%); } .date { padding: 23px 0; text-align: center; } .date__container { flex-direction: column; max-width: 390px; padding-left: 20px; padding-right: 20px; } .date__top { flex-direction: column; margin-bottom: 13px; } .date__top-text { margin-top: 15px; font-size: 12px; max-width: none; } .date__top-text>br { display: none; } .date__inner-list { text-align: start; z-index: 1; margin-bottom: 23px; max-width: 189px; width: 100%; z-index: 30; position: relative; } .date__inner-item { font-family: Poppins, sans-serif; font-size: 14px; line-height: 19px; font-weight: 400; } .checkWrapper { min-width: 21px; } .checkWrapper>img { width: 21px; height: 21px; min-width: 21px; } .date__inner-list-title { font-size: 14px; max-width: 236px; line-height: 22px; margin-bottom: 4px; font-weight: 700; line-height: 28px; color: #808080; } .date__bottom { flex-direction: column-reverse; align-items: start; z-index: 20; } .date__bottom-btn { margin-top: 43px; padding: 22px 0; width: 100%; margin-right: 0; margin-bottom: 11px; margin-top: 10px; max-width: 331px; margin-left: auto; margin-right: auto; border-radius: 20px; display: flex; z-index: 30; } .bonus_sec { margin-bottom: 30px; position: relative; z-index: 29; } .bonus_sec .star-left { position: absolute; top: -21px; display: block; } .bonus_sec .star-right { position: absolute; bottom: -36.5px; right: 6px; display: block; } .gliter__bg { position: absolute; top: -50px; left: -20px; z-index: 30; display: block; } .bonus_sec-title { margin-bottom: 5px; } .bonus_sec-text { font-size: 12px; } .gradient { background: linear-gradient(0deg, #171717 72.78%, rgba(23, 23, 23, 0) 100%); width: 200%; left: -50%; height: 254px; position: absolute; bottom: -90px; z-index: 20; } .date__img { position: absolute; bottom: 70px; width: 344px; height: 433px; right: -110px; object-fit: contain; object-position: top; margin-left: auto; z-index: 20; margin-right: auto; } .date__img-wrapper { width: 214px; height: 311px; top: 320px; right: -18%; opacity: 0.7; background-color: #02EB51; box-shadow: 0px 4px 60px 0px #cb0000; } .gift__img { max-width: 74px; width: 100%; } .date__inner-info-text { margin-bottom: 0px; text-align: center; font-size: 14px; font-weight: 400; line-height: 18px; } .freeText { font-family: Montserrat, sans-serif; font-size: 16px; margin-bottom: 19px; color: #808080; } .mobileBg { position: absolute; top: 0; left: 0; width: 100%; height: 961px; } .thought__box { text-align: center; overflow-x: hidden; width: 100%; max-width: 600px; margin: 50px auto; } .thought__title { font-size: 22px; line-height: 125%; font-weight: 800; font-family: Mulish, sans-serif; text-transform: uppercase; margin-bottom: 20px; } .thought__info { display: flex; align-items: center; gap: 15px; animation: slide 15s linear infinite; } .thought__info img { border-radius: 20px; flex-shrink: 0; } @keyframes slide { from { transform: translateX(0); } to { transform: translateX(-150%); } } /* Smooth infinite effect: clone images */ .thought__info::after { content: ""; } .mb-20 { margin-bottom: 20px; } .speaker__gradient { background: var(--color-red-43, #D50606); backdrop-filter: blur(0px); width: 268px; height: 295px; border-radius: 999px; opacity: 40%; position: absolute; top: 110px; left: 50%; } @media screen and (max-width: 350px) { .container { padding: 0 10px; } .bonus_sec-title { font-size: 14px; margin-bottom: 1px; } .bonus_sec-text { font-size: 12px; margin-bottom: 1px; } } @media (max-width:600px) { .thought__box { overflow-x: visible; width: 100%; } } .mb-0 { margin-bottom: 0; } .mt-0 { margin-top: 0; } .free__text { font-size: 12px; position: relative; z-index: 30; margin-top: -50px; margin-bottom: 15px; display: flex; justify-content: center; align-items: end; svg { margin-bottom: -20px; } } .date__bottom-btn { position: relative; display: inline-block; outline: none; } .date__bottom-btn::after { content: ""; position: absolute; inset: -6px; border-radius: inherit; box-shadow: 0px 5px 0px 0px #610606; animation: cta-pulse 1.8s ease-out infinite; pointer-events: none; } .date__bottom-btn:hover::after, .date__bottom-btn:focus-visible::after { animation-duration: 1.2s; box-shadow: 0 0 0 4px rgba(59, 130, 246, 0.35); } .date__bottom-btn:focus-visible { box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.6); border-radius: 9999px; } @media (prefers-reduced-motion: reduce) { .date__bottom-btn::after, .date__bottom-btn:hover::after { animation: none; box-shadow: 0 0 0 6px rgba(59, 130, 246, 0.25); } } @keyframes cta-pulse { 0% { transform: scale(0.98); opacity: 0.55; box-shadow: 0px 5px 0px 0px #A70000; } 60% { transform: scale(1.12); opacity: 0; box-shadow: 0 0 0 18px rgba(59, 130, 246, 0); } 100% { transform: scale(1.12); opacity: 0; box-shadow: 0 0 0 0 rgba(59, 130, 246, 0); } }
+  </style>
+  <noscript>
+    <link rel="stylesheet" href="./css/modal.css" />
+  </noscript>
+</head>
+
+<body>
+  <div class="date">
+    <div class="container date__container">
+      <div class="date__inner">
+        <div class="date__top registerBtn">
+          <div class="date__top-left">
+            <div class="date__top-left-dot"></div>
+            <h4 class="date__top-left-title">28-29-30-Oktyabr | 20:00</h4>
+          </div>
+        </div>
+        <h1 class="date__inner-title">
+          3 kunda Speakingni 3x oshirish metodikasi
+        </h1>
+        <div class="date__inner-info">
+          <p class="date__inner-info-text">
+            Hattoki siz dangasa va <br> motivatsiyasi tez tushib ketadigan o’quvchi bo’lsangiz ham
+          </p>
+        </div>
+        <div class="center">
+          <ul class="date__inner-list">
+            <h4 class="date__inner-list-title">3 kunlik BEPUL darsda siz:</h4>
+            <li class="date__inner-item">
+              — Gaplarni bir-biriga <b>ulab erkin</b> gapirishni
+            </li>
+            <li class="date__inner-item">
+              — <b>1 kunda 1000</b> ta so’z yodlash MNEMONIKA texnikasini
+            </li>
+            <li class="date__inner-item">
+              — O’rgangan barcha <b>grammatikangizni</b> Speaking'da o’ylanmasdan qo’llashni o’rganasiz
+            </li>
+          </ul>
+          <img src="./images/speaker.avif" alt="Invertor rasmi" decoding="async"  loading="lazy"         class="date__img only_tablet speakerImg" width="323" height="484">
+          <div class="speaker__gradient"></div>
+          <div class="flex">
+            <button class="date__bottom-btn registerBtn">>>> bepul qatnashish <<< </button>
+                <div class="date__timer" id="timer">02 : 00</div>
+          </div>
+          <div class="gradient"></div>
+        </div>
+        <P class="free__text registerBtn">
+          Darsda qatnashish uchun bosing
+          <svg width="87" height="86" viewBox="0 0 87 86" fill="none" xmlns="http://www.w3.org/2000/svg"
+            xmlns:xlink="http://www.w3.org/1999/xlink">
+            <rect width="68.5637" height="68.5637"
+              transform="matrix(0.292388 -0.9563 -0.9563 -0.292388 66.0039 85.7639)" fill="url(#pattern0_6493_98)" />
+            <defs>
+              <pattern id="pattern0_6493_98" patternContentUnits="objectBoundingBox" width="1" height="1">
+                <use xlink:href="#image0_6493_98" transform="scale(0.00390625)" />
+              </pattern>
+              <image id="image0_6493_98" width="256" height="256" preserveAspectRatio="none"
+                xlink:href="data:image/png;base64,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" />
+            </defs>
+          </svg>
+        </P>
+
+        <div class="bonus_sec registerBtn">
+          <img src="./images/gift.avif" alt="gift" width="74" height="84" loading="lazy" decoding="async"
+            class="gift__img">
+          <div>
+            <p class="bonus_sec-title">Darsga kirganalar uchun bonus:</p>
+            <p class="bonus_sec-text">Speaking’ni 30 Kunda <br> chiqarish kun tartibi</p>
+          </div>
+        </div>
+
+        <div class="thought__box">
+          <h3 class="thought__title">Bepul darsdan fikrlar 👇🏻</h3>
+
+          <div class="thought__info">
+            <img src="./images/thought-one.avif" loading="lazy" decoding="async" alt="images">
+            <img src="./images/thought-two.avif" loading="lazy" decoding="async" alt="images">
+
+            <img src="./images/thought-one.avif" loading="lazy" decoding="async" alt="images">
+            <img src="./images/thought-two.avif" loading="lazy" decoding="async" alt="images">
+
+            <img src="./images/thought-one.avif" loading="lazy" decoding="async" alt="images">
+            <img src="./images/thought-two.avif" loading="lazy" decoding="async" alt="images">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div id="registrationModal" class="homeModal" style="display: none">
+    <div class="homeModalOverlay"></div>
+    <div class="homeFormContainer">
+      <button class="closeButton" id="closeModalBtn">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 12 12" fill="none">
+          <path d="M1 11L11 1M1 1.00001L11 11" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" />
+        </svg>
+      </button>
+      <div class="homeFormTop">
+        <h1 class="homeFormTopTitle">
+          MASTERKLASSGA <br />
+          RO'YXATDAN O'TISH
+        </h1>
+      </div>
+      <form id="registrationForm" name="contact-form">
+        <div class="HomeFormRow">
+          <label class="HomeFormRowLabel" for="phone">Telefon raqamingiz:</label>
+          <div class="phone-input-container">
+            <div class="country-selector">
+              <div class="selected-country" id="selectedCountry">
+                <span id="selectedCountryCode">+998</span>
+                <svg id="dropdownIcon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24"
+                  fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <polyline points="6 9 12 15 18 9"></polyline>
+                </svg>
+              </div>
+              <div class="country-dropdown" id="countryDropdown" style="display: none"></div>
+            </div>
+            <input class="HomeFormRowInput" type="tel" id="phone" name="phone" placeholder="88 888 88 88"
+              autocomplete="tel" />
+          </div>
+          <p class="homeFormErrorText" id="phoneError" style="display: none">
+            ❌ Telefon raqam mos emas!
+          </p>
+        </div>
+        <button type="submit" class="HomeFormBtn" id="submitBtn">
+          ro’yxatdan o’tish </button>
+      </form>
+    </div>
+  </div>
+
+  <script defer src="./js/app.js"></script>
+</body>
+
+</html>
